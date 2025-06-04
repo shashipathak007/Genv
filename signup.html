@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Sign up for a new Genvest account to start your investment journey." />
+    <meta name="keywords" content="Genvest, sign up, register, create account, investment, financial planning" />
+    <title>Genvest - Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Styles for the signup page body and main content to center the card */
+        body.signup-page {
+            font-family: Arial, sans-serif; /* Fallback, ensure this matches your site's font */
+            background-color: #f0f2f5; /* Light grey background for the entire page */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Include padding/border in element's total width and height */
+        }
+
+        #main-content {
+            flex-grow: 1; /* Allows main content to take up remaining space, pushing footer down */
+            display: flex;
+            justify-content: center; /* Horizontally center the signup card */
+            align-items: center; /* Vertically center the signup card */
+            padding: 40px 20px; /* Add some padding around the card */
+            box-sizing: border-box;
+        }
+
+        .signup-section {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Ensure the card itself is centered within its section */
+            align-items: center;
+        }
+
+        /* Styles for the Signup Card */
+        .signup-card {
+            background-color: #ffffff; /* White background for the card */
+            padding: 40px;
+            border-radius: 8px; /* Slightly rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            width: 100%;
+            max-width: 450px; /* Maximum width of the signup card, as per image */
+            text-align: center; /* Center aligns the content within the card */
+            box-sizing: border-box; /* Include padding in the element's total width */
+        }
+
+        .signup-card h2 {
+            color: #1e3d30; /* Dark green similar to the image's text */
+            font-size: 28px;
+            margin-bottom: 30px; /* Space below the heading */
+            font-weight: bold;
+        }
+
+        /* Form Group (Label + Input) Styles */
+        .form-group {
+            margin-bottom: 20px; /* Space between form groups */
+            text-align: left; /* Align labels and inputs to the left within their group */
+        }
+
+        .form-group label {
+            display: block; /* Make label take full width and put input on new line */
+            margin-bottom: 8px; /* Space between label and input */
+            color: #333333;
+            font-size: 16px;
+            font-weight: normal; /* Labels are not bold in the image */
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+            width: 100%; /* Make inputs span the full width of the card */
+            padding: 14px 15px; /* Ample padding for a taller input field */
+            border: 1px solid #cccccc; /* Light grey border */
+            border-radius: 6px; /* Rounded corners for inputs */
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding and border are included in the width */
+            outline: none; /* Remove default blue outline on focus */
+            transition: border-color 0.2s ease; /* Smooth transition for border on focus */
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group input[type="password"]:focus {
+            border-color: #6a8d7d; /* A slightly lighter green on focus */
+        }
+
+        /* Signup Button Styles */
+        .signup-btn-form {
+            background-color: #2b5f4c; /* Dark green for the button */
+            color: #ffffff; /* White text */
+            padding: 15px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer; /* Indicate it's clickable */
+            width: 100%; /* Full width button */
+            margin-top: 20px; /* Space above the button */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        .signup-btn-form:hover {
+            background-color: #1e3d30; /* Slightly darker green on hover */
+        }
+
+        /* Login Text Styles */
+        .login-text {
+            margin-top: 25px; /* Space above the login text */
+            font-size: 16px;
+            color: #555555; /* Dark grey for "Already have an account?" */
+        }
+
+        .login-text a {
+            color: #2b5f4c; /* Dark green for the "Login Here" link */
+            text-decoration: none;
+            font-weight: bold; /* "Login Here" is bold in the image */
+            transition: color 0.2s ease; /* Smooth color change on hover */
+        }
+
+        .login-text a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #1e3d30; /* Darker green on hover */
+        }
+
+        /* Responsive Adjustments (Optional, but good practice) */
+        @media (max-width: 500px) {
+            .signup-card {
+                margin: 0 15px; /* Add horizontal margin on very small screens */
+                padding: 30px 20px; /* Reduce padding slightly on small screens */
+            }
+        }
+    </style>
+</head>
+<body class="signup-page">
+    <header id="main-header" class="site-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Genvest Ventures Pvt. Ltd. Logo" id="site-logo" />
+                </a>
+            </div>
+            </div>
+    </header>
+
+    <main id="main-content">
+        <section class="signup-section">
+            <div class="signup-card">
+                <h2>Create Your Genvest Account</h2>
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" name="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="signup-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <button type="submit" class="signup-btn-form">Sign Up</button>
+                    <p class="login-text">Already have an account? <a href="login.html">Login Here</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" class="site-footer section-padding">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Genvest Ventures Logo" class="footer-logo" />
+                    <p class="company-name-nepali">जेनभेष्ट भेन्चर्स प्रा.लि</p>
+                    <p>Turning Ambition into Impact. Your trusted partner in financial growth and stability.</p>
+                </div>
+                <div class="footer-column footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="market-data.html">Market Data</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Kathmandu, Nepal</p>
+                    <p>Email: <a href="mailto:info@genvest.com.np">info@genvest.com.np</a></p>
+                    <p>Phone: <a href="tel:+97712345678">+977-1-2345678</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; <span id="current-year">2025</span> Genvest Ventures Pvt. Ltd. All rights reserved.</p>
+                <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a> | <a href="disclosures.html">Disclosures</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        let lastScrollTop = 0;
+        const header = document.getElementById('main-header');
+        if (header) {
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    header.classList.add('header-auto-hidden');
+                } else {
+                    header.classList.remove('header-auto-hidden');
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            });
+        }
+
+        // --- Signup Form Submission Logic (Client-side simulation) ---
+        const signupForm = document.getElementById('signup-form');
+        if (signupForm) {
+            signupForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const fullName = document.getElementById('full-name').value;
+                const email = document.getElementById('signup-email').value;
+                const password = document.getElementById('signup-password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match!');
+                    return;
+                }
+
+                // Basic validation
+                if (fullName && email && password) {
+                    // In a real app, send data to server for user creation
+                    alert(`Account created for ${fullName} (${email})! (Simulated)`);
+                    window.location.href = 'login.html'; // Redirect to login page
+                } else {
+                    alert('Please fill in all fields.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

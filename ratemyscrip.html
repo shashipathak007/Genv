@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Engage in discussions, share your thoughts, and rate content on various financial topics at Genvest.">
+    <meta name="keywords" content="Genvest discussion, financial forum, share thoughts, investment community, rate content">
+    <title>Genvest - Community Discussion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Body and Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+.discussion-section {
+    padding: 60px 0;
+    background-color: #f0f2f5;
+}
+
+.discussion-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.intro-content {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Discussion Post Card Styles */
+.discussion-post-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #007bff; /* Default avatar background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.username {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.card-content p {
+    color: #333;
+    line-height: 1.6;
+    margin: 0 0 15px 0; /* Adjust margin as needed */
+}
+
+.post-actions {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+    padding-top: 10px;
+    border-top: 1px solid #eee; /* Separator for actions */
+}
+
+.rate-button {
+    background-color: #e0e0e0; /* Light gray for inactive state */
+    color: #555;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+.rate-button:hover {
+    background-color: #d0d0d0;
+}
+
+.rate-button.active {
+    background-color: #007bff; /* Blue for active/liked state */
+    color: #fff;
+}
+
+.rate-button.active:hover {
+    background-color: #0056b3;
+}
+
+.rate-button i {
+    margin-right: 5px;
+}
+
+/* Responsive Adjustments (if necessary, though the current layout is quite fluid) */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2em;
+    }
+
+    .discussion-post-card {
+        padding: 15px;
+    }
+
+    .avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+
+    .username {
+        font-size: 1em;
+    }
+
+    .rate-button {
+        padding: 7px 12px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .intro-content {
+        font-size: 1em;
+    }
+    
+    .rate-button {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <header id="main-header" class="site-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Genvest Ventures Pvt. Ltd. Logo" id="site-logo">
+                </a>
+            </div>
+            <nav id="main-nav" class="site-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    
+                     <li><a href="market-data.html">Market Data</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="ratemyscrip.html" class="active">Rate My Scrip</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+           
+    </header>
+
+    <main id="main-content" style="padding-top: 80px;">
+
+        <section id="discussion-board" class="discussion-section section-padding">
+            <div class="container discussion-container">
+                <h2 class="section-title text-center">Community Discussions</h2>
+                <p class="text-center intro-content" style="max-width: 700px; margin: 0 auto 40px auto;">
+                    Share your thoughts, ask questions, and engage with the Genvest community on various financial topics.
+                </p>
+
+                <div class="discussion-post-card">
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/45/007bff/ffffff?text=U1" alt="User 1 Avatar" class="avatar">
+                        <span class="username">Genvest User 1</span>
+                    </div>
+                    <div class="card-content">
+                        <p>This is an example discussion post. You can write about market trends, investment strategies, or ask for advice here!</p>
+                        </div>
+                    <div class="post-actions">
+                        <button class="rate-button">
+                            <i class="fas fa-thumbs-up"></i> Rate
+                        </button>
+                    </div>
+                </div>
+
+                <div class="discussion-post-card">
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/45/ff6600/ffffff?text=U2" alt="User 2 Avatar" class="avatar">
+                        <span class="username">Genvest User 2</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Looking for insights on long-term retirement planning. Any tips or resources from the community would be greatly appreciated!</p>
+                    </div>
+                    <div class="post-actions">
+                        <button class="rate-button">
+                            <i class="fas fa-thumbs-up"></i> Rate
+                        </button>
+                    </div>
+                </div>
+
+                <div class="discussion-post-card">
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/45/28a745/ffffff?text=U3" alt="User 3 Avatar" class="avatar">
+                        <span class="username">Genvest User 3</span>
+                    </div>
+                    <div class="card-content">
+                        <p>What are your thoughts on the recent changes in the stock market? Is it a good time to consider diversifying portfolios?</p>
+                    </div>
+                    <div class="post-actions">
+                        <button class="rate-button">
+                            <i class="fas fa-thumbs-up"></i> Rate
+                        </button>
+                    </div>
+                </div>
+
+                <div class="discussion-post-card">
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/45/cccccc/666666?text=U4" alt="User 4 Avatar" class="avatar">
+                        <span class="username">Genvest User 4</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Empty discussion post. Ready for your thoughts!</p>
+                    </div>
+                    <div class="post-actions">
+                        <button class="rate-button">
+                            <i class="fas fa-thumbs-up"></i> Rate
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="main-footer" class="site-footer section-padding">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Genvest Ventures Logo" class="footer-logo">
+                    <p class="company-name-nepali">जेनभेष्ट भेन्चर्स प्रा.लि</p>
+                    <p>Turning Ambition into Impact. Your trusted partner in financial growth and stability.</p>
+                </div>
+                <div class="footer-column footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="market-data.html">Market Data</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="discussion.html" class="active">Discussion</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Kathmandu, Nepal</p>
+                    <p>Email: <a href="mailto:info@genvest.com.np">info@genvest.com.np</a></p>
+                    <p>Phone: <a href="tel:+97712345678">+977-1-2345678</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; <span id="current-year">2025</span> Genvest Ventures Pvt. Ltd. All rights reserved.</p>
+                <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a> | <a href="disclosures.html">Disclosures</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to update the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Script for auto-hiding header on scroll down and show on scroll up
+        let lastScrollTop = 0;
+        const header = document.getElementById('main-header');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scroll Down - hide header
+                header.classList.add('header-auto-hidden');
+            } else {
+                // Scroll Up - show header
+                header.classList.remove('header-auto-hidden');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+
+        // Basic Mobile Navigation Toggle
+        const navToggle = document.getElementById('mobile-nav-toggle');
+        const mainNav = document.getElementById('main-nav');
+
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                const isExpanded = mainNav.classList.contains('active');
+                navToggle.setAttribute('aria-expanded', isExpanded);
+                if (isExpanded) {
+                    navToggle.innerHTML = '&times;'; // Change to 'X' icon
+                } else {
+                    navToggle.innerHTML = '&#9776;'; // Change back to hamburger icon
+                }
+            });
+        }
+
+        // --- Login/User Icon Logic (Copied from profile.html for consistency) ---
+        function checkLoginStatus() {
+            const userArea = document.querySelector('.user-area');
+            let authButton = document.getElementById('auth-button'); 
+
+            if (!authButton || !userArea.contains(authButton)) {
+                userArea.innerHTML = `<a href="login.html" class="login-btn" id="auth-button">Login</a>`;
+                authButton = document.getElementById('auth-button');
+            }
+
+            const userLoggedIn = localStorage.getItem('isLoggedIn') === 'true'; // Simulate login state
+            const storedProfilePic = localStorage.getItem('userProfilePic'); // Get stored pic
+
+            if (userLoggedIn) {
+                const profilePicSrc = storedProfilePic || 'https://via.placeholder.com/40/007bff/ffffff?text=U'; // Use stored pic or default
+                userArea.innerHTML = `<a href="profile.html" class="user-profile-icon" id="auth-button" aria-label="User Profile"><img src="${profilePicSrc}" alt="User Profile"></a>`;
+            } else {
+                authButton.href = 'login.html';
+                authButton.textContent = 'Login';
+                authButton.classList.add('login-btn');
+                authButton.classList.remove('user-profile-icon');
+                if (authButton.querySelector('img')) {
+                    authButton.innerHTML = 'Login';
+                }
+            }
+        }
+
+        // --- Discussion Rating Button Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLoginStatus(); // Ensure header login status is set on load
+
+            const rateButtons = document.querySelectorAll('.rate-button');
+
+            rateButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    button.classList.toggle('active');
+                    if (button.classList.contains('active')) {
+                        button.innerHTML = '<i class="fas fa-thumbs-up"></i> Liked!';
+                    } else {
+                        button.innerHTML = '<i class="fas fa-thumbs-up"></i> Rate';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

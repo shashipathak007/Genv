@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Access live market data, stock scrip information, and floorsheet analysis from the Nepal Stock Exchange on Genvest.">
+    <meta name="keywords" content="Genvest market data, Nepal stock exchange, NEPSE live data, scrip information, floorsheet, stock analysis">
+    <title>Market Data - Genvest</title>
+    <link rel="stylesheet" href="style.css">
+    <style>  
+      .site-header.header-auto-hidden {
+          transform: translateY(-100%);
+      }
+    </style>
+</head>
+<body>
+
+    <header id="main-header" class="site-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Genvest Ventures Pvt. Ltd. Logo" id="site-logo">
+                </a>
+            </div>
+            <nav id="main-nav" class="site-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                   
+                    <li><a href="market-data.html" class="active">Market Data</a></li> 
+
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                     <li><a href="ratemyscrip.html">Rate My Scrip</a></li>
+                     <li><a href="portfolio.html">Portfolio</a></li>
+
+                </ul>
+            </nav>
+            <button id="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section id="market-data-hero" class="hero-section text-center">
+            <div class="container">
+                <h1 class="hero-title">Market Data & Scrip Analysis</h1>
+                <p class="hero-subtitle">Enter a stock symbol below to view its latest trading information and historical performance.</p>
+            </div>
+        </section>
+
+        <section id="scrip-search-section" class="section-padding" style="padding-bottom: 30px;">
+            <div class="container">
+                <form id="scrip-search-form" class="scrip-search-form">
+                    <label for="scrip-symbol-input" class="sr-only">Scrip Symbol</label>
+                    <input type="text" id="scrip-symbol-input" name="scripSymbol" placeholder="Enter Scrip Symbol (e.g., NABIL)" required>
+                    <button type="submit" class="btn btn-primary">Get Details</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="scrip-results-section" class="section-padding" style="padding-top: 0;">
+            <div class="container">
+                <div id="results-output" class="results-output-container">
+                    <p class="results-prompt">Please enter a scrip symbol above to view its market data.</p>
+
+                    <div id="loading-message" class="loading-message" style="display: none; text-align:center; padding: 20px;">
+                        <p>Fetching data, please wait...</p>
+                        </div>
+
+                    <div id="error-message" class="error-message" style="display: none; text-align:center; padding: 20px; color: red;">
+                        <p>Error: Scrip not found or data unavailable. Please check the symbol and try again.</p>
+                    </div>
+
+                    <div id="scrip-data-display" class="scrip-data-details" style="display: none;">
+                        <header class="scrip-header">
+                            <h2 id="data-scrip-name">[Company Name] (<span id="data-scrip-symbol">[SYMBOL]</span>)</h2>
+                            <p id="data-scrip-sector">Sector: [Sector Name]</p>
+                        </header>
+                        <hr>
+
+                        <div class="scrip-summary grid-container" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 20px; margin-bottom:30px;">
+                            <div class="summary-item card">
+                                <div class="card-content">
+                                    <h4>Last Traded Price (LTP)</h4>
+                                    <p id="data-ltp" class="data-value">[Value]</p>
+                                </div>
+                            </div>
+                            <div class="summary-item card">
+                                <div class="card-content">
+                                    <h4>Open</h4>
+                                    <p id="data-open" class="data-value">[Value]</p>
+                                </div>
+                            </div>
+                            <div class="summary-item card">
+                                <div class="card-content">
+                                    <h4>High</h4>
+                                    <p id="data-high" class="data-value">[Value]</p>
+                                </div>
+                            </div>
+                            <div class="summary-item card">
+                                <div class="card-content">
+                                    <h4>Low</h4>
+                                    <p id="data-low" class="data-value">[Value]</p>
+                                </div>
+                            </div>
+                            <div class="summary-item card">
+                                <div class="card-content">
+                                    <h4>Close / Previous Close</h4>
+                                    <p><span id="data-close">[Value]</span> / <span id="data-prev-close">[Value]</span></p>
+                                </div>
+                            </div>
+                            <div class="summary-item card">
+                                <div class="card-content">
+                                    <h4>Change / % Change</h4>
+                                    <p><span id="data-change">[Value]</span> (<span id="data-percent-change">[Value]%</span>)</p>
+                                </div>
+                            </div>
+                            <div class="summary-item card">
+                                <div class="card-content">
+                                    <h4>Volume Traded</h4>
+                                    <p id="data-volume" class="data-value">[Value]</p>
+                                </div>
+                            </div>
+                            <div class="summary-item card">
+                                <div class="card-content">
+                                    <h4>Turnover</h4>
+                                    <p id="data-turnover" class="data-value">[Value]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="scrip-charts-tables">
+                            <div class="chart-placeholder card" style="margin-bottom: 30px;">
+                                <div class="card-content">
+                                    <h4>Price History Chart</h4>
+                                    <div id="price-chart-area" style="width:100%; height:300px; background-color: #f0f0f0; display:flex; align-items:center; justify-content:center;">Chart will be displayed here</div>
+                                </div>
+                            </div>
+
+                            <div class="floorsheet-placeholder card">
+                                 <div class="card-content">
+                                    <h4>Recent Trades (Floorsheet Highlights)</h4>
+                                    <div id="floorsheet-table-area" style="overflow-x:auto;">
+                                        <table style="width:100%; border-collapse: collapse;">
+                                            <thead>
+                                                <tr>
+                                                    <th style="border:1px solid #ddd; padding:8px; text-align:left;">Contract No</th>
+                                                    <th style="border:1px solid #ddd; padding:8px; text-align:left;">Buyer</th>
+                                                    <th style="border:1px solid #ddd; padding:8px; text-align:left;">Seller</th>
+                                                    <th style="border:1px solid #ddd; padding:8px; text-align:right;">Quantity</th>
+                                                    <th style="border:1px solid #ddd; padding:8px; text-align:right;">Rate</th>
+                                                    <th style="border:1px solid #ddd; padding:8px; text-align:right;">Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="floorsheet-data-body">
+                                                <tr><td colspan="6" style="padding:10px; text-align:center;">No recent trades to display or enter scrip to view.</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> </div> </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" class="site-footer section-padding">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Genvest Ventures Logo" class="footer-logo">
+                    <p class="company-name-nepali">जेनभेष्ट भेन्चर्स प्रा.लि</p>
+                    <p>Turning Ambition into Impact. Your trusted partner in financial growth and stability.</p>
+                </div>
+                <div class="footer-column footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="market-data.html" class="active">Market Data</a></li> <li><a href="insights.html">Insights</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Kathmandu, Nepal</p>
+                    <p>Email: <a href="mailto:info@genvest.com.np">info@genvest.com.np</a></p>
+                    <p>Phone: <a href="tel:+97712345678">+977-1-2345678</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>© <span id="current-year">2025</span> Genvest Ventures Pvt. Ltd. All rights reserved.</p>
+                <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a> | <a href="disclosures.html">Disclosures</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to update the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+         // Script for auto-hiding header on scroll down and show on scroll up
+        let lastScrollTop = 0;
+        const header = document.getElementById('main-header');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scroll Down - hide header
+                header.classList.add('header-auto-hidden');
+            } else {
+                // Scroll Up - show header
+                header.classList.remove('header-auto-hidden');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+
+        // Basic Mobile Navigation Toggle
+        const navToggle = document.getElementById('mobile-nav-toggle');
+        const mainNav = document.getElementById('main-nav');
+
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                const isExpanded = mainNav.classList.contains('active');
+                navToggle.setAttribute('aria-expanded', isExpanded);
+                if (isExpanded) {
+                    navToggle.innerHTML = '&times;'; // Change to 'X' icon
+                } else {
+                    navToggle.innerHTML = '&#9776;'; // Change back to hamburger icon
+                }
+            });
+        }
+
+        // Placeholder for Scrip Search Form interaction (actual data fetching needs backend/JS API calls)
+        const scripSearchForm = document.getElementById('scrip-search-form');
+        const resultsOutput = document.getElementById('results-output');
+        const scripDataDisplay = document.getElementById('scrip-data-display');
+        const loadingMessage = document.getElementById('loading-message');
+        const errorMessage = document.getElementById('error-message');
+        const resultsPrompt = document.querySelector('.results-prompt');
+
+
+        if (scripSearchForm) {
+            scripSearchForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent actual form submission
+                
+                // Hide prompt and previous results/errors
+                if(resultsPrompt) resultsPrompt.style.display = 'none';
+                scripDataDisplay.style.display = 'none';
+                errorMessage.style.display = 'none';
+                loadingMessage.style.display = 'block'; // Show loading message
+
+                const scripSymbol = document.getElementById('scrip-symbol-input').value.toUpperCase();
+                console.log('Searching for scrip:', scripSymbol);
+
+                // ** SIMULATE API CALL AND DATA DISPLAY **
+                // In a real application, you would make an API call here.
+                // For now, we'll just simulate a delay and then show placeholder data or an error.
+                setTimeout(() => {
+                    loadingMessage.style.display = 'none';
+                    if (scripSymbol === "NABIL" || scripSymbol === "HDL") { // Example valid symbols
+                        // Populate placeholder data (replace with actual fetched data later)
+                        document.getElementById('data-scrip-name').textContent = scripSymbol === "NABIL" ? "Nabil Bank Limited" : "Himalayan Distillery Ltd.";
+                        document.getElementById('data-scrip-symbol').textContent = scripSymbol;
+                        document.getElementById('data-scrip-sector').textContent = "Commercial Bank / Manufacturing & Processing";
+                        document.getElementById('data-ltp').textContent = "1050.50";
+                        document.getElementById('data-open').textContent = "1040.00";
+                        document.getElementById('data-high').textContent = "1060.00";
+                        document.getElementById('data-low').textContent = "1035.00";
+                        document.getElementById('data-close').textContent = "1050.00";
+                        document.getElementById('data-prev-close').textContent = "1038.00";
+                        document.getElementById('data-change').textContent = "+12.50";
+                        document.getElementById('data-percent-change').textContent = "+1.20";
+                        document.getElementById('data-volume').textContent = "15,780";
+                        document.getElementById('data-turnover').textContent = "16,500,390.00";
+                        
+                        // Placeholder for floorsheet table
+                        const floorsheetBody = document.getElementById('floorsheet-data-body');
+                        floorsheetBody.innerHTML = `
+                            <tr>
+                                <td style="border:1px solid #ddd; padding:8px;">2025051501001234</td>
+                                <td style="border:1px solid #ddd; padding:8px;">58</td>
+                                <td style="border:1px solid #ddd; padding:8px;">45</td>
+                                <td style="border:1px solid #ddd; padding:8px; text-align:right;">100</td>
+                                <td style="border:1px solid #ddd; padding:8px; text-align:right;">1050.00</td>
+                                <td style="border:1px solid #ddd; padding:8px; text-align:right;">105,000.00</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #ddd; padding:8px;">2025051501001235</td>
+                                <td style="border:1px solid #ddd; padding:8px;">33</td>
+                                <td style="border:1px solid #ddd; padding:8px;">58</td>
+                                <td style="border:1px solid #ddd; padding:8px; text-align:right;">50</td>
+                                <td style="border:1px solid #ddd; padding:8px; text-align:right;">1051.00</td>
+                                <td style="border:1px solid #ddd; padding:8px; text-align:right;">52,550.00</td>
+                            </tr>
+                        `;
+
+
+                        scripDataDisplay.style.display = 'block';
+                    } else {
+                        errorMessage.style.display = 'block';
+                        if(resultsPrompt) resultsPrompt.style.display = 'block'; // Show prompt again if error
+                    }
+                }, 1500); // Simulate network delay
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Genvest offers personalized investment strategies, portfolio management, and financial planning to help individuals and families achieve their financial goals." />
+    <meta name="keywords" content="Genvest, investment, portfolio management, financial planning, wealth management, Nepal, Kathmandu" />
+    <title>Genvest - Turning Ambition into Impact</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+    
+      .site-header {
+          background-color: #ffffff;
+          padding: 10px 0;
+          border-bottom: 1px solid #e0e0e0;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+          position: fixed;
+          top: 0;
+          z-index: 1000;
+          width: 100%;
+          transition: transform 0.4s ease-in-out;
+      }
+      
+      .site-header.header-auto-hidden {
+          transform: translateY(-100%);
+          
+      }
+    .login-btn {
+          background-color: #007bff; /* Example button color */
+          color: white;
+          padding: 8px 15px;
+          border-radius: 5px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+      }
+
+     .login-btn:hover {
+          background-color: #0056b3;
+      }
+      /* Styles for the section with image and text */
+.hero-content-with-image {
+    display: flex; /* Enables flexbox for side-by-side layout */
+    align-items: center; /* Vertically aligns items in the center */
+    justify-content: center; /* Horizontally centers the content */
+    gap: 40px; /* Space between the image and text containers */
+    padding: 60px 20px; /* Adjust padding as needed */
+    max-width: 1200px; /* Limit overall width */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+.hero-image-container {
+    /* Adjusted for wider photo */
+    flex: 1.2; /* Allows this container to grow and shrink, giving it a bit more preference */
+    max-width: 480px; /* Increased max width for the image container (e.g., from 400px to 480px) */
+    text-align: center; /* Center the image if it's smaller than its container */
+}
+
+.hero-image {
+    width: 100%; /* Makes the image responsive within its container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Slightly rounded corners for the image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.hero-text-container {
+    /* Adjusted to accommodate wider photo */
+    flex: 1.8; /* Slightly reduced to give more space to the image (e.g., from 2 to 1.8) */
+    text-align: left; /* Aligns text to the left within its container */
+}
+
+/* Existing styles for hero-title and hero-subtitle (adjust if needed) */
+.hero-title {
+    font-size: 2.8em; /* Adjust font size as needed */
+    color: #2c3e50; /* Example color */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.3em; /* Adjust font size as needed */
+    color: #555; /* Example color */
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-about-image {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.hero-cta {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #28a745; /* Example button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-cta:hover {
+    background-color: #218838; /* Darker on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content-with-image {
+        flex-direction: column; /* Stacks items vertically on smaller screens */
+        text-align: center; /* Centers text on smaller screens */
+    }
+
+    .hero-image-container {
+        margin-bottom: 30px; /* Space below image when stacked */
+        max-width: 90%; /* Adjust max width for image on small screens to be a bit wider */
+    }
+
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8em;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+
+    .hero-cta {
+        padding: 12px 25px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header id="main-header" class="site-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Genvest Ventures Pvt. Ltd. Logo" id="site-logo" />
+                </a>
+            </div>
+            <nav id="main-nav" class="site-navigation">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown"><a href="services.html">Services</a></li>
+                    <li><a href="market-data.html">Market Data</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="ratemyscrip.html">Rate My Scrip</a></li>
+                </ul>
+            </nav>
+            <div class="user-area">
+                <a href="login.html" class="login-btn" id="login-btn">Login</a>
+            </div>
+            <button id="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+        </div>
+    </header>
+
+    <main id="main-content" style="padding-top: 80px;"> <!-- add top padding so content not hidden under fixed header -->
+
+        <section id="hero" class="hero-section text-center">
+            <div class="container hero-content-with-image">
+    <div class="hero-image-container">
+        <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Description of your image" class="hero-image">
+    </div>
+    <div class="hero-text-container">
+        <h1 class="hero-title">Personalized Investment Strategies for Your Financial Goals</h1>
+        <p class="hero-subtitle">Genvest offers tailored financial planning and investment advisory to help individuals and families achieve long-term prosperity.</p>
+        <p class="hero-about-image">
+            Here you can write a brief description or some context about the image. 
+            For example, it could be a photo of a happy family, a financial advisor, or a representation of growth.
+        </p>
+        
+    </div>
+</div>
+        </section>
+
+        <section id="intro" class="intro-section section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Your Partner in Financial Growth</h2>
+                <div class="intro-content">
+                    <p>Welcome to Genvest. We believe in <strong>Turning Ambition into Impact</strong>. Our firm was founded on the principle that expert financial guidance should not only grow your wealth but also empower you to achieve what truly matters. We partner with you to understand your unique aspirations and craft personalized strategies designed for meaningful, real-world results.</p>
+                </div>
+                <div class="key-differentiators grid-container">
+                    <div class="differentiator-item">
+                        <h3>Personalized Approach</h3>
+                        <p>Custom strategies tailored to your individual goals, risk tolerance, and life circumstances.</p>
+                    </div>
+                    <div class="differentiator-item">
+                        <h3>Education & Transparency</h3>
+                        <p>We ensure you understand your investments and the 'why' behind our recommendations, fostering clarity and confidence.</p>
+                    </div>
+                    <div class="differentiator-item">
+                        <h3>Proactive Communication & Expert Advice</h3>
+                        <p>Benefit from regular updates, clear market insights, and easy access to our experienced advisors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Our Core Services</h2>
+                <div class="services-grid grid-container">
+                    <article class="service-item card">
+                        <div class="card-content">
+                            <h3>Portfolio Management</h3>
+                            <p>Strategic and disciplined management of your investment portfolio to optimize returns and manage risk according to your objectives.</p>
+                            <a href="services.html#portfolio-management" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </article>
+                    <article class="service-item card">
+                        <div class="card-content">
+                            <h3>Financial Planning</h3>
+                            <p>Comprehensive planning for your future, including retirement, education savings, wealth transfer, and other major life goals.</p>
+                            <a href="services.html#financial-planning" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </article>
+                    <article class="service-item card">
+                        <div class="card-content">
+                            <h3>Investment Advisory</h3>
+                            <p>Ongoing, personalized advice to guide your investment decisions and help you navigate complex financial markets effectively.</p>
+                            <a href="services.html#investment-advisory" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="insights" class="insights-section section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Latest Insights & News</h2>
+                <div class="insights-grid grid-container">
+                    <article class="insight-item card">
+                        <div class="card-content">
+                            <h3 class="insight-title">Understanding Market Volatility in 2025</h3>
+                            <p class="insight-excerpt">A brief look at current market trends and how to navigate them...</p>
+                            <span class="insight-meta">Published: May 10, 2025</span>
+                            <a href="insight-market-volatility.html" class="btn btn-text">Read More &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="insight-item card">
+                        <div class="card-content">
+                            <h3 class="insight-title">Key Strategies for Effective Retirement Planning</h3>
+                            <p class="insight-excerpt">Essential tips to ensure your retirement savings are on track for your future...</p>
+                            <span class="insight-meta">Published: May 01, 2025</span>
+                            <a href="insight-long-term-investing.html" class="btn btn-text">Read More &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="insight-item card">
+                        <div class="card-content">
+                            <h3 class="insight-title">The Power of Diversification</h3>
+                            <p class="insight-excerpt">Exploring how a diversified portfolio can enhance your investment strategy...</p>
+                            <span class="insight-meta">Published: April 25, 2025</span>
+                            <a href="insight-diversification-power.html" class="btn btn-text">Read More &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center top-margin">
+                    <a href="insights.html" class="btn btn-primary">Explore All Insights</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Client-Centric Approach</h2>
+                <div class="testimonial-item">
+                    <blockquote>
+                        <p>"Genvest helped us navigate a complex financial landscape with clarity and personalized attention. Their commitment to understanding our goals made all the difference."</p>
+                        <cite>- A Valued Client</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-final" class="cta-final-section section-padding text-center">
+            <div class="container">
+                <h2 class="cta-title">Ready to Turn Your Ambition into Impact?</h2>
+                <p class="cta-text">Let Genvest be your trusted partner in achieving your financial aspirations. Contact us today for a personalized consultation.</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Get Started Today</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="main-footer" class="site-footer section-padding">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Genvest Ventures Logo" class="footer-logo" />
+                    <p class="company-name-nepali">जेनभेष्ट भेन्चर्स प्रा.लि</p>
+                    <p>Turning Ambition into Impact. Your trusted partner in financial growth and stability.</p>
+                </div>
+                <div class="footer-column footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="market-data.html">Market Data</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Kathmandu, Nepal</p>
+                    <p>Email: <a href="mailto:info@genvest.com.np">info@genvest.com.np</a></p>
+                    <p>Phone: <a href="tel:+97712345678">+977-1-2345678</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; <span id="current-year">2025</span> Genvest Ventures Pvt. Ltd. All rights reserved.</p>
+                <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a> | <a href="disclosures.html">Disclosures</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to update the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Script for auto-hiding header on scroll down and show on scroll up
+        let lastScrollTop = 0;
+        const header = document.getElementById('main-header');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scroll Down - hide header
+                header.classList.add('header-auto-hidden');
+            } else {
+                // Scroll Up - show header
+                header.classList.remove('header-auto-hidden');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+
+        // Basic Mobile Navigation Toggle
+        const navToggle = document.getElementById('mobile-nav-toggle');
+        const mainNav = document.getElementById('main-nav');
+
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                const isExpanded = mainNav.classList.contains('active');
+                navToggle.setAttribute('aria-expanded', isExpanded);
+                if (isExpanded) {
+                    navToggle.innerHTML = '&times;'; // Change to 'X' icon
+                } else {
+                    navToggle.innerHTML = '&#9776;'; // Change back to hamburger icon
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+

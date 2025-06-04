@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Login to your Genvest account to manage your investments and financial plans." />
+    <meta name="keywords" content="Genvest, login, sign in, account, investment, financial planning" />
+    <title>Genvest - Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Styles for the login page body and main content to center the card */
+        body.login-page {
+            font-family: Arial, sans-serif; /* Fallback, ensure this matches your site's font */
+            background-color: #f0f2f5; /* Light grey background for the entire page */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Include padding/border in element's total width and height */
+        }
+
+        #main-content {
+            flex-grow: 1; /* Allows main content to take up remaining space, pushing footer down */
+            display: flex;
+            justify-content: center; /* Horizontally center the login card */
+            align-items: center; /* Vertically center the login card */
+            padding: 40px 20px; /* Add some padding around the card */
+            box-sizing: border-box;
+        }
+
+        .login-section {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Ensure the card itself is centered within its section */
+            align-items: center;
+        }
+
+        /* Styles for the Login Card */
+        .login-card {
+            background-color: #ffffff; /* White background for the card */
+            padding: 40px;
+            border-radius: 8px; /* Slightly rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            width: 100%;
+            max-width: 450px; /* Maximum width of the login card, as per image */
+            text-align: center; /* Center aligns the content within the card */
+            box-sizing: border-box; /* Include padding in the element's total width */
+        }
+
+        .login-card h2 {
+            color: #1e3d30; /* Dark green similar to the image's text */
+            font-size: 28px;
+            margin-bottom: 30px; /* Space below the heading */
+            font-weight: bold;
+        }
+
+        /* Form Group (Label + Input) Styles */
+        .form-group {
+            margin-bottom: 20px; /* Space between form groups */
+            text-align: left; /* Align labels and inputs to the left within their group */
+        }
+
+        .form-group label {
+            display: block; /* Make label take full width and put input on new line */
+            margin-bottom: 8px; /* Space between label and input */
+            color: #333333;
+            font-size: 16px;
+            font-weight: normal; /* Labels are not bold in the image */
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%; /* Make inputs span the full width of the card */
+            padding: 14px 15px; /* Ample padding for a taller input field */
+            border: 1px solid #cccccc; /* Light grey border */
+            border-radius: 6px; /* Rounded corners for inputs */
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding and border are included in the width */
+            outline: none; /* Remove default blue outline on focus */
+            transition: border-color 0.2s ease; /* Smooth transition for border on focus */
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="password"]:focus {
+            border-color: #6a8d7d; /* A slightly lighter green on focus */
+        }
+
+        /* Login Button Styles */
+        .login-btn-form {
+            background-color: #2b5f4c; /* Dark green for the button */
+            color: #ffffff; /* White text */
+            padding: 15px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer; /* Indicate it's clickable */
+            width: 100%; /* Full width button */
+            margin-top: 20px; /* Space above the button */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        .login-btn-form:hover {
+            background-color: #1e3d30; /* Slightly darker green on hover */
+        }
+
+        /* Forgot Password Link Styles */
+        .forgot-password {
+            margin-top: 20px; /* Space above the link */
+            font-size: 15px;
+        }
+
+        .forgot-password a {
+            color: #4b6a5e; /* A medium green color for the link */
+            text-decoration: none; /* Remove default underline */
+            transition: color 0.2s ease; /* Smooth color change on hover */
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #2b5f4c; /* Darker green on hover */
+        }
+
+        /* Sign Up Text Styles */
+        .signup-text {
+            margin-top: 25px; /* Space above the sign up text */
+            font-size: 16px;
+            color: #555555; /* Dark grey for the "Don't have an account?" part */
+        }
+
+        .signup-text a {
+            color: #2b5f4c; /* Dark green for the "Sign Up" link */
+            text-decoration: none;
+            font-weight: bold; /* "Sign Up" is bold in the image */
+            transition: color 0.2s ease; /* Smooth color change on hover */
+        }
+
+        .signup-text a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #1e3d30; /* Darker green on hover */
+        }
+
+        /* Responsive Adjustments (Optional, but good practice) */
+        @media (max-width: 500px) {
+            .login-card {
+                margin: 0 15px; /* Add horizontal margin on very small screens */
+                padding: 30px 20px; /* Reduce padding slightly on small screens */
+            }
+        }
+    </style>
+</head>
+<body class="login-page">
+    <header id="main-header" class="site-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Genvest Ventures Pvt. Ltd. Logo" id="site-logo" />
+                </a>
+            </div>
+            </div>
+    </header>
+
+    <main id="main-content">
+        <section class="login-section">
+            <div class="login-card">
+                <h2>Login to Your Account</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username"> Email</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="login-btn-form">Log In</button>
+                    <div class="forgot-password">
+                        <a href="forgot-password.html">Forgot Password?</a>
+                    </div>
+                    <p class="signup-text">Don't have an account? <a href="signup.html">Sign Up</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" class="site-footer section-padding">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Genvest Ventures Logo" class="footer-logo" />
+                    <p class="company-name-nepali">जेनभेष्ट भेन्चर्स प्रा.लि</p>
+                    <p>Turning Ambition into Impact. Your trusted partner in financial growth and stability.</p>
+                </div>
+                <div class="footer-column footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="market-data.html">Market Data</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Kathmandu, Nepal</p>
+                    <p>Email: <a href="mailto:info@genvest.com.np">info@genvest.com.np</a></p>
+                    <p>Phone: <a href="tel:+97712345678">+977-1-2345678</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; <span id="current-year">2025</span> Genvest Ventures Pvt. Ltd. All rights reserved.</p>
+                <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a> | <a href="disclosures.html">Disclosures</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to update the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Script for auto-hiding header on scroll down and show on scroll up
+        let lastScrollTop = 0;
+        const header = document.getElementById('main-header');
+
+        // Only add scroll listener if header exists to prevent errors on pages without header
+        if (header) {
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // Scroll Down - hide header
+                    header.classList.add('header-auto-hidden');
+                } else {
+                    // Scroll Up - show header
+                    header.classList.remove('header-auto-hidden');
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            });
+        }
+
+        // Basic Mobile Navigation Toggle (won't be active on login.html due to HTML changes)
+        const navToggle = document.getElementById('mobile-nav-toggle');
+        const mainNav = document.getElementById('main-nav');
+
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                const isExpanded = mainNav.classList.contains('active');
+                navToggle.setAttribute('aria-expanded', isExpanded);
+                if (isExpanded) {
+                    navToggle.innerHTML = '&times;'; // Change to 'X' icon
+                } else {
+                    navToggle.innerHTML = '&#9776;'; // Change back to hamburger icon
+                }
+            });
+        }
+
+        // --- Login/User Icon Logic (Replicated for consistency, though auth-button is removed on login page) ---
+        // This function would typically run on pages where the auth-button might appear
+        function checkLoginStatus() {
+            const authButton = document.getElementById('auth-button');
+            if (!authButton) return; // Exit if auth button is not present on this page
+
+            const userLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+            if (userLoggedIn) {
+                const userPhotoURL = 'https://via.placeholder.com/40'; // Replace with actual user photo URL
+                authButton.outerHTML = `<a href="profile.html" class="user-profile-icon" id="auth-button" aria-label="User Profile"><img src="${userPhotoURL}" alt="User"></a>`;
+            } else {
+                authButton.href = 'login.html';
+                authButton.textContent = 'Login';
+                authButton.classList.add('login-btn');
+                authButton.classList.remove('user-profile-icon');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', checkLoginStatus);
+
+        // --- Login Form Submission Logic ---
+        const loginForm = document.getElementById('login-form');
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+
+                if (username === 'user' && password === '123') { // Simple dummy credentials
+                    localStorage.setItem('isLoggedIn', 'true'); // Simulate successful login
+                    alert('Login successful!');
+                    window.location.href = 'index.html'; // Redirect to home page
+                } else {
+                    alert('Invalid username or password. Please try again.');
+
+                }
+            });
+        }
+    </script>
+</body>
+</html>

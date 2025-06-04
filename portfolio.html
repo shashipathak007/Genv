@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Explore the investment portfolio and successful ventures of Genvest." />
+    <meta name="keywords" content="Genvest, portfolio, investments, ventures, projects, success stories" />
+    <title>Genvest - Our Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* General Body Styles for Portfolio Page */
+        body.portfolio-page {
+            font-family: Arial, sans-serif; /* Fallback, ensure this matches your site's font */
+            background-color: #f0f2f5; /* Light grey background for the entire page */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Include padding/border in element's total width and height */
+        }
+
+        /* Main Content Section Styling */
+        #main-content {
+            flex-grow: 1; /* Allows main content to take up remaining space, pushing footer down */
+            display: flex;
+            justify-content: center; /* Horizontally center the portfolio card */
+            align-items: flex-start; /* Align to the top, not center, for longer content */
+            padding: 40px 20px; /* Add some padding around the card */
+            box-sizing: border-box;
+        }
+
+        .portfolio-section {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Ensure the card itself is centered within its section */
+            align-items: flex-start;
+        }
+
+        /* Styles for the Portfolio Card Container */
+        .portfolio-card {
+            background-color: #ffffff; /* White background for the card */
+            padding: 40px;
+            border-radius: 8px; /* Slightly rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            width: 100%;
+            max-width: 960px; /* Wider card for portfolio content */
+            text-align: center; /* Center aligns the main heading and intro text */
+            box-sizing: border-box; /* Include padding in the element's total width */
+        }
+
+        .portfolio-card h2 {
+            color: #1e3d30; /* Dark green similar to your other page headings */
+            font-size: 32px;
+            margin-bottom: 20px; /* Space below the heading */
+            font-weight: bold;
+        }
+
+        .portfolio-card .intro-text {
+            color: #555555; /* Dark grey for introductory text */
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px; /* Space below the intro text */
+            max-width: 700px; /* Limit width for readability */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Portfolio Grid for items */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+            gap: 30px; /* Space between grid items */
+            margin-top: 30px;
+            text-align: left; /* Align text within items to the left */
+        }
+
+        /* Individual Portfolio Item Styles */
+        .portfolio-item {
+            background-color: #f9f9f9; /* Slightly off-white background for items */
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align content to the start */
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .portfolio-item .item-icon {
+            font-size: 48px; /* Size for SVG/Emoji icons */
+            color: #2b5f4c; /* Green color for icons */
+            margin-bottom: 15px;
+            display: block; /* Ensure it takes its own line */
+        }
+
+        .portfolio-item h3 {
+            color: #1e3d30; /* Dark green for item titles */
+            font-size: 22px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .portfolio-item p {
+            color: #666666; /* Medium grey for item descriptions */
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-item .learn-more {
+            color: #2b5f4c; /* Green for "Learn More" link */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease;
+            margin-top: auto; /* Pushes the link to the bottom of the card */
+        }
+
+        .portfolio-item .learn-more:hover {
+            text-decoration: underline;
+            color: #1e3d30;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .portfolio-card {
+                padding: 30px;
+            }
+            .portfolio-card h2 {
+                font-size: 28px;
+            }
+            .portfolio-card .intro-text {
+                font-size: 16px;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .portfolio-card {
+                margin: 0 15px;
+                padding: 25px 20px;
+            }
+            .portfolio-item {
+                padding: 20px;
+            }
+            .portfolio-item h3 {
+                font-size: 20px;
+            }
+            .portfolio-item .item-icon {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body class="portfolio-page">
+    <header id="main-header" class="site-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Genvest Ventures Pvt. Ltd. Logo" id="site-logo" />
+                </a>
+            </div>
+            <nav id="main-nav" class="site-navigation">
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    
+                    <li><a href="market-data.html">Market Data</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="ratemyscrip.html">Rate My Scrip</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                </ul>
+            </nav>
+            </div>
+    </header>
+
+    <main id="main-content">
+        <section class="portfolio-section">
+            <div class="portfolio-card">
+                <h2>Our Investment Portfolio</h2>
+                <p class="intro-text">
+                    At Genvest, we pride ourselves on a diverse and impactful investment portfolio that drives growth and fosters innovation.
+                    Explore some of our key ventures and success stories below.
+                </p>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <span class="item-icon">&#128187;</span> <h3>Innovative Tech Solutions</h3>
+                        <p>
+                            Investment in a cutting-edge AI startup revolutionizing data analytics for financial markets.
+                            This venture aims to provide unparalleled insights and predictive capabilities.
+                        </p>
+                        <a href="#" class="learn-more">Learn More &rarr;</a>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <span class="item-icon">&#127757;</span> <h3>Sustainable Energy Projects</h3>
+                        <p>
+                            Funding for large-scale solar and wind energy farms, contributing to a greener future
+                            and robust returns in the renewable sector.
+                        </p>
+                        <a href="#" class="learn-more">Learn More &rarr;</a>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <span class="item-icon">&#127968;</span> <h3>Urban Real Estate Development</h3>
+                        <p>
+                            Strategic investments in modern, sustainable urban housing and commercial complexes,
+                            focusing on smart city integration and community growth.
+                        </p>
+                        <a href="#" class="learn-more">Learn More &rarr;</a>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <span class="item-icon">&#128133;</span> <h3>Advanced Healthcare Solutions</h3>
+                        <p>
+                            Support for biotech companies developing groundbreaking medical treatments and
+                            innovative healthcare delivery systems to improve global well-being.
+                        </p>
+                        <a href="#" class="learn-more">Learn More &rarr;</a>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <span class="item-icon">&#128184;</span> <h3>Disruptive FinTech Platforms</h3>
+                        <p>
+                            Investing in next-generation financial technology platforms that enhance accessibility,
+                            security, and efficiency in personal and corporate finance.
+                        </p>
+                        <a href="#" class="learn-more">Learn More &rarr;</a>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <span class="item-icon">&#127807;</span> <h3>Modern Agricultural Ventures</h3>
+                        <p>
+                            Capitalizing on sustainable agriculture techniques and food technology to ensure
+                            food security and optimize resource utilization.
+                        </p>
+                        <a href="#" class="learn-more">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" class="site-footer section-padding">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <img src="WhatsApp Image 2025-05-15 at 18.25.00_c3411221.png" alt="Genvest Ventures Logo" class="footer-logo" />
+                    <p class="company-name-nepali">जेनभेष्ट भेन्चर्स प्रा.लि</p>
+                    <p>Turning Ambition into Impact. Your trusted partner in financial growth and stability.</p>
+                </div>
+                <div class="footer-column footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="market-data.html">Market Data</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Kathmandu, Nepal</p>
+                    <p>Email: <a href="mailto:info@genvest.com.np">info@genvest.com.np</a></p>
+                    <p>Phone: <a href="tel:+97712345678">+977-1-2345678</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; <span id="current-year">2025</span> Genvest Ventures Pvt. Ltd. All rights reserved.</p>
+                <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a> | <a href="disclosures.html">Disclosures</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to update the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Script for auto-hiding header on scroll down and show on scroll up
+        let lastScrollTop = 0;
+        const header = document.getElementById('main-header');
+
+        // Only add scroll listener if header exists to prevent errors on pages without header
+        if (header) {
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // Scroll Down - hide header
+                    header.classList.add('header-auto-hidden');
+                } else {
+                    // Scroll Up - show header
+                    header.classList.remove('header-auto-hidden');
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            });
+        }
+    </script>
+</body>
+</html>
