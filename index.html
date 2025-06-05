@@ -8,7 +8,6 @@
     <title>Genvest - Turning Ambition into Impact</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-    
       .site-header {
           background-color: #ffffff;
           padding: 10px 0;
@@ -26,7 +25,7 @@
           
       }
     .login-btn {
-          background-color: #007bff; /* Example button color */
+          background-color: #007bff;
           color: white;
           padding: 8px 15px;
           border-radius: 5px;
@@ -38,48 +37,44 @@
      .login-btn:hover {
           background-color: #0056b3;
       }
-      /* Styles for the section with image and text */
 .hero-content-with-image {
-    display: flex; /* Enables flexbox for side-by-side layout */
-    align-items: center; /* Vertically aligns items in the center */
-    justify-content: center; /* Horizontally centers the content */
-    gap: 40px; /* Space between the image and text containers */
-    padding: 60px 20px; /* Adjust padding as needed */
-    max-width: 1200px; /* Limit overall width */
-    margin: 0 auto; /* Center the container on the page */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .hero-image-container {
-    /* Adjusted for wider photo */
-    flex: 1.2; /* Allows this container to grow and shrink, giving it a bit more preference */
-    max-width: 480px; /* Increased max width for the image container (e.g., from 400px to 480px) */
-    text-align: center; /* Center the image if it's smaller than its container */
+    flex: 1.2;
+    max-width: 480px;
+    text-align: center;
 }
 
 .hero-image {
-    width: 100%; /* Makes the image responsive within its container */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 8px; /* Slightly rounded corners for the image */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .hero-text-container {
-    /* Adjusted to accommodate wider photo */
-    flex: 1.8; /* Slightly reduced to give more space to the image (e.g., from 2 to 1.8) */
-    text-align: left; /* Aligns text to the left within its container */
+    flex: 1.8;
+    text-align: left;
 }
 
-/* Existing styles for hero-title and hero-subtitle (adjust if needed) */
 .hero-title {
-    font-size: 2.8em; /* Adjust font size as needed */
-    color: #2c3e50; /* Example color */
+    font-size: 2.8em;
+    color: #2c3e50;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .hero-subtitle {
-    font-size: 1.3em; /* Adjust font size as needed */
-    color: #555; /* Example color */
+    font-size: 1.3em;
+    color: #555;
     margin-bottom: 30px;
     line-height: 1.6;
 }
@@ -94,7 +89,7 @@
 .hero-cta {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #28a745; /* Example button color */
+    background-color: #28a745;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -102,19 +97,18 @@
 }
 
 .hero-cta:hover {
-    background-color: #218838; /* Darker on hover */
+    background-color: #218838;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .hero-content-with-image {
-        flex-direction: column; /* Stacks items vertically on smaller screens */
-        text-align: center; /* Centers text on smaller screens */
+        flex-direction: column;
+        text-align: center;
     }
 
     .hero-image-container {
-        margin-bottom: 30px; /* Space below image when stacked */
-        max-width: 90%; /* Adjust max width for image on small screens to be a bit wider */
+        margin-bottom: 30px;
+        max-width: 90%;
     }
 
     .hero-title {
@@ -167,7 +161,7 @@
         </div>
     </header>
 
-    <main id="main-content" style="padding-top: 80px;"> <!-- add top padding so content not hidden under fixed header -->
+    <main id="main-content" style="padding-top: 80px;">
 
         <section id="hero" class="hero-section text-center">
             <div class="container hero-content-with-image">
@@ -178,8 +172,6 @@
         <h1 class="hero-title">Personalized Investment Strategies for Your Financial Goals</h1>
         <p class="hero-subtitle">Genvest offers tailored financial planning and investment advisory to help individuals and families achieve long-term prosperity.</p>
         <p class="hero-about-image">
-<!--             Here you can write a brief description or some context about the image. 
-            For example, it could be a photo of a happy family, a financial advisor, or a representation of growth. -->
         </p>
         
     </div>
@@ -190,7 +182,7 @@
             <div class="container">
                 <h2 class="section-title text-center">Your Partner in Financial Growth</h2>
                 <div class="intro-content">
-                    <p>Welcome to Genvest. We believe in <strong>Turning Ambition into Impact</strong>. Our firm was founded on the principle that expert financial guidance should not only grow your wealth but also empower you to achieve what truly matters. We partner with you to understand your unique aspirations and craft personalized strategies designed for meaningful, real-world results.</p>
+                    <p>Welcome to Genvest. We believe in **Turning Ambition into Impact**. Our firm was founded on the principle that expert financial guidance should not only grow your wealth but also empower you to achieve what truly matters. We partner with you to understand your unique aspirations and craft personalized strategies designed for meaningful, real-world results.</p>
                 </div>
                 <div class="key-differentiators grid-container">
                     <div class="differentiator-item">
@@ -330,10 +322,8 @@
     </footer>
 
     <script>
-        // Simple script to update the current year in the footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Script for auto-hiding header on scroll down and show on scroll up
         let lastScrollTop = 0;
         const header = document.getElementById('main-header');
 
@@ -341,16 +331,13 @@
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
             if (scrollTop > lastScrollTop) {
-                // Scroll Down - hide header
                 header.classList.add('header-auto-hidden');
             } else {
-                // Scroll Up - show header
                 header.classList.remove('header-auto-hidden');
             }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
 
-        // Basic Mobile Navigation Toggle
         const navToggle = document.getElementById('mobile-nav-toggle');
         const mainNav = document.getElementById('main-nav');
 
@@ -360,13 +347,12 @@
                 const isExpanded = mainNav.classList.contains('active');
                 navToggle.setAttribute('aria-expanded', isExpanded);
                 if (isExpanded) {
-                    navToggle.innerHTML = '&times;'; // Change to 'X' icon
+                    navToggle.innerHTML = '&times;';
                 } else {
-                    navToggle.innerHTML = '&#9776;'; // Change back to hamburger icon
+                    navToggle.innerHTML = '&#9776;';
                 }
             });
         }
     </script>
 </body>
 </html>
-
