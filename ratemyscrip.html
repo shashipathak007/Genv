@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* General Body and Container Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5; /* Light gray background */
+    background-color: #f0f2f5;
     margin: 0;
     padding: 0;
 }
@@ -41,7 +40,6 @@ body {
     line-height: 1.6;
 }
 
-/* Discussion Post Card Styles */
 .discussion-post-card {
     background-color: #fff;
     border-radius: 8px;
@@ -63,7 +61,7 @@ body {
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
-    background-color: #007bff; /* Default avatar background */
+    background-color: #007bff;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -81,18 +79,18 @@ body {
 .card-content p {
     color: #333;
     line-height: 1.6;
-    margin: 0 0 15px 0; /* Adjust margin as needed */
+    margin: 0 0 15px 0;
 }
 
 .post-actions {
     display: flex;
-    justify-content: flex-end; /* Align button to the right */
+    justify-content: flex-end;
     padding-top: 10px;
-    border-top: 1px solid #eee; /* Separator for actions */
+    border-top: 1px solid #eee;
 }
 
 .rate-button {
-    background-color: #e0e0e0; /* Light gray for inactive state */
+    background-color: #e0e0e0;
     color: #555;
     border: none;
     padding: 8px 15px;
@@ -102,7 +100,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 5px; /* Space between icon and text */
+    gap: 5px;
 }
 
 .rate-button:hover {
@@ -110,7 +108,7 @@ body {
 }
 
 .rate-button.active {
-    background-color: #007bff; /* Blue for active/liked state */
+    background-color: #007bff;
     color: #fff;
 }
 
@@ -122,7 +120,6 @@ body {
     margin-right: 5px;
 }
 
-/* Responsive Adjustments (if necessary, though the current layout is quite fluid) */
 @media (max-width: 768px) {
     .section-title {
         font-size: 2em;
@@ -178,14 +175,14 @@ body {
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     
-                     <li><a href="market-data.html">Market Data</a></li>
+                    <li><a href="market-data.html">Market Data</a></li>
                     <li><a href="insights.html">Insights</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="ratemyscrip.html" class="active">Rate My Scrip</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                 </ul>
             </nav>
-           
+            
     </header>
 
     <main id="main-content" style="padding-top: 80px;">
@@ -299,10 +296,8 @@ body {
     </footer>
 
     <script>
-        // Simple script to update the current year in the footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Script for auto-hiding header on scroll down and show on scroll up
         let lastScrollTop = 0;
         const header = document.getElementById('main-header');
 
@@ -310,16 +305,13 @@ body {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
             if (scrollTop > lastScrollTop) {
-                // Scroll Down - hide header
                 header.classList.add('header-auto-hidden');
             } else {
-                // Scroll Up - show header
                 header.classList.remove('header-auto-hidden');
             }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
 
-        // Basic Mobile Navigation Toggle
         const navToggle = document.getElementById('mobile-nav-toggle');
         const mainNav = document.getElementById('main-nav');
 
@@ -329,28 +321,27 @@ body {
                 const isExpanded = mainNav.classList.contains('active');
                 navToggle.setAttribute('aria-expanded', isExpanded);
                 if (isExpanded) {
-                    navToggle.innerHTML = '&times;'; // Change to 'X' icon
+                    navToggle.innerHTML = '&times;';
                 } else {
-                    navToggle.innerHTML = '&#9776;'; // Change back to hamburger icon
+                    navToggle.innerHTML = '&#9776;';
                 }
             });
         }
 
-        // --- Login/User Icon Logic (Copied from profile.html for consistency) ---
         function checkLoginStatus() {
             const userArea = document.querySelector('.user-area');
-            let authButton = document.getElementById('auth-button'); 
+            let authButton = document.getElementById('auth-button');
 
             if (!authButton || !userArea.contains(authButton)) {
                 userArea.innerHTML = `<a href="login.html" class="login-btn" id="auth-button">Login</a>`;
                 authButton = document.getElementById('auth-button');
             }
 
-            const userLoggedIn = localStorage.getItem('isLoggedIn') === 'true'; // Simulate login state
-            const storedProfilePic = localStorage.getItem('userProfilePic'); // Get stored pic
+            const userLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            const storedProfilePic = localStorage.getItem('userProfilePic');
 
             if (userLoggedIn) {
-                const profilePicSrc = storedProfilePic || 'https://via.placeholder.com/40/007bff/ffffff?text=U'; // Use stored pic or default
+                const profilePicSrc = storedProfilePic || 'https://via.placeholder.com/40/007bff/ffffff?text=U';
                 userArea.innerHTML = `<a href="profile.html" class="user-profile-icon" id="auth-button" aria-label="User Profile"><img src="${profilePicSrc}" alt="User Profile"></a>`;
             } else {
                 authButton.href = 'login.html';
@@ -363,9 +354,8 @@ body {
             }
         }
 
-        // --- Discussion Rating Button Logic ---
         document.addEventListener('DOMContentLoaded', () => {
-            checkLoginStatus(); // Ensure header login status is set on load
+            checkLoginStatus();
 
             const rateButtons = document.querySelectorAll('.rate-button');
 
