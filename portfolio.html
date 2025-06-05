@@ -8,117 +8,112 @@
     <title>Genvest - Our Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-        /* General Body Styles for Portfolio Page */
         body.portfolio-page {
-            font-family: Arial, sans-serif; /* Fallback, ensure this matches your site's font */
-            background-color: #f0f2f5; /* Light grey background for the entire page */
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensure body takes full viewport height */
+            min-height: 100vh;
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Include padding/border in element's total width and height */
+            box-sizing: border-box;
         }
 
-        /* Main Content Section Styling */
         #main-content {
-            flex-grow: 1; /* Allows main content to take up remaining space, pushing footer down */
+            flex-grow: 1;
             display: flex;
-            justify-content: center; /* Horizontally center the portfolio card */
-            align-items: flex-start; /* Align to the top, not center, for longer content */
-            padding: 40px 20px; /* Add some padding around the card */
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
             box-sizing: border-box;
         }
 
         .portfolio-section {
             width: 100%;
             display: flex;
-            justify-content: center; /* Ensure the card itself is centered within its section */
+            justify-content: center;
             align-items: flex-start;
         }
 
-        /* Styles for the Portfolio Card Container */
         .portfolio-card {
-            background-color: #ffffff; /* White background for the card */
+            background-color: #ffffff;
             padding: 40px;
-            border-radius: 8px; /* Slightly rounded corners */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 960px; /* Wider card for portfolio content */
-            text-align: center; /* Center aligns the main heading and intro text */
-            box-sizing: border-box; /* Include padding in the element's total width */
+            max-width: 960px;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .portfolio-card h2 {
-            color: #1e3d30; /* Dark green similar to your other page headings */
+            color: #1e3d30;
             font-size: 32px;
-            margin-bottom: 20px; /* Space below the heading */
+            margin-bottom: 20px;
             font-weight: bold;
         }
 
         .portfolio-card .intro-text {
-            color: #555555; /* Dark grey for introductory text */
+            color: #555555;
             font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 40px; /* Space below the intro text */
-            max-width: 700px; /* Limit width for readability */
+            margin-bottom: 40px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        /* Portfolio Grid for items */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
-            gap: 30px; /* Space between grid items */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             margin-top: 30px;
-            text-align: left; /* Align text within items to the left */
+            text-align: left;
         }
 
-        /* Individual Portfolio Item Styles */
         .portfolio-item {
-            background-color: #f9f9f9; /* Slightly off-white background for items */
+            background-color: #f9f9f9;
             padding: 25px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Align content to the start */
+            align-items: flex-start;
         }
 
         .portfolio-item:hover {
-            transform: translateY(-5px); /* Slight lift effect on hover */
+            transform: translateY(-5px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
         }
 
         .portfolio-item .item-icon {
-            font-size: 48px; /* Size for SVG/Emoji icons */
-            color: #2b5f4c; /* Green color for icons */
+            font-size: 48px;
+            color: #2b5f4c;
             margin-bottom: 15px;
-            display: block; /* Ensure it takes its own line */
+            display: block;
         }
 
         .portfolio-item h3 {
-            color: #1e3d30; /* Dark green for item titles */
+            color: #1e3d30;
             font-size: 22px;
             margin-bottom: 10px;
             font-weight: bold;
         }
 
         .portfolio-item p {
-            color: #666666; /* Medium grey for item descriptions */
+            color: #666666;
             font-size: 15px;
             line-height: 1.6;
             margin-bottom: 15px;
         }
 
         .portfolio-item .learn-more {
-            color: #2b5f4c; /* Green for "Learn More" link */
+            color: #2b5f4c;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.2s ease;
-            margin-top: auto; /* Pushes the link to the bottom of the card */
+            margin-top: auto;
         }
 
         .portfolio-item .learn-more:hover {
@@ -126,7 +121,6 @@
             color: #1e3d30;
         }
 
-        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .portfolio-card {
                 padding: 30px;
@@ -138,7 +132,7 @@
                 font-size: 16px;
             }
             .portfolio-grid {
-                grid-template-columns: 1fr; /* Single column on smaller screens */
+                grid-template-columns: 1fr;
             }
         }
 
@@ -171,7 +165,6 @@
                 <ul>
                     <li><a href="index.html" >Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    
                     <li><a href="market-data.html">Market Data</a></li>
                     <li><a href="insights.html">Insights</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -285,26 +278,21 @@
     </footer>
 
     <script>
-        // Simple script to update the current year in the footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Script for auto-hiding header on scroll down and show on scroll up
         let lastScrollTop = 0;
         const header = document.getElementById('main-header');
 
-        // Only add scroll listener if header exists to prevent errors on pages without header
         if (header) {
             window.addEventListener('scroll', function() {
                 let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
                 if (scrollTop > lastScrollTop) {
-                    // Scroll Down - hide header
                     header.classList.add('header-auto-hidden');
                 } else {
-                    // Scroll Up - show header
                     header.classList.remove('header-auto-hidden');
                 }
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
             });
         }
     </script>
