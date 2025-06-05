@@ -7,7 +7,7 @@
     <meta name="keywords" content="Genvest market data, Nepal stock exchange, NEPSE live data, scrip information, floorsheet, stock analysis">
     <title>Market Data - Genvest</title>
     <link rel="stylesheet" href="style.css">
-    <style>  
+    <style>
       .site-header.header-auto-hidden {
           transform: translateY(-100%);
       }
@@ -26,14 +26,11 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                   
-                    <li><a href="market-data.html" class="active">Market Data</a></li> 
-
+                    <li><a href="market-data.html" class="active">Market Data</a></li>
                     <li><a href="insights.html">Insights</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
-                     <li><a href="ratemyscrip.html">Rate My Scrip</a></li>
-                     <li><a href="portfolio.html">Portfolio</a></li>
-
+                    <li><a href="ratemyscrip.html">Rate My Scrip</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
                 </ul>
             </nav>
             <button id="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
@@ -66,7 +63,7 @@
 
                     <div id="loading-message" class="loading-message" style="display: none; text-align:center; padding: 20px;">
                         <p>Fetching data, please wait...</p>
-                        </div>
+                    </div>
 
                     <div id="error-message" class="error-message" style="display: none; text-align:center; padding: 20px; color: red;">
                         <p>Error: Scrip not found or data unavailable. Please check the symbol and try again.</p>
@@ -139,7 +136,7 @@
                             </div>
 
                             <div class="floorsheet-placeholder card">
-                                 <div class="card-content">
+                                <div class="card-content">
                                     <h4>Recent Trades (Floorsheet Highlights)</h4>
                                     <div id="floorsheet-table-area" style="overflow-x:auto;">
                                         <table style="width:100%; border-collapse: collapse;">
@@ -179,7 +176,8 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="market-data.html" class="active">Market Data</a></li> <li><a href="insights.html">Insights</a></li>
+                        <li><a href="market-data.html" class="active">Market Data</a></li>
+                        <li><a href="insights.html">Insights</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
@@ -199,10 +197,8 @@
     </footer>
 
     <script>
-        // Simple script to update the current year in the footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-         // Script for auto-hiding header on scroll down and show on scroll up
         let lastScrollTop = 0;
         const header = document.getElementById('main-header');
 
@@ -210,16 +206,13 @@
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
             if (scrollTop > lastScrollTop) {
-                // Scroll Down - hide header
                 header.classList.add('header-auto-hidden');
             } else {
-                // Scroll Up - show header
                 header.classList.remove('header-auto-hidden');
             }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
 
-        // Basic Mobile Navigation Toggle
         const navToggle = document.getElementById('mobile-nav-toggle');
         const mainNav = document.getElementById('main-nav');
 
@@ -229,14 +222,13 @@
                 const isExpanded = mainNav.classList.contains('active');
                 navToggle.setAttribute('aria-expanded', isExpanded);
                 if (isExpanded) {
-                    navToggle.innerHTML = '&times;'; // Change to 'X' icon
+                    navToggle.innerHTML = '&times;';
                 } else {
-                    navToggle.innerHTML = '&#9776;'; // Change back to hamburger icon
+                    navToggle.innerHTML = '&#9776;';
                 }
             });
         }
 
-        // Placeholder for Scrip Search Form interaction (actual data fetching needs backend/JS API calls)
         const scripSearchForm = document.getElementById('scrip-search-form');
         const resultsOutput = document.getElementById('results-output');
         const scripDataDisplay = document.getElementById('scrip-data-display');
@@ -247,24 +239,19 @@
 
         if (scripSearchForm) {
             scripSearchForm.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent actual form submission
-                
-                // Hide prompt and previous results/errors
+                event.preventDefault();
+
                 if(resultsPrompt) resultsPrompt.style.display = 'none';
                 scripDataDisplay.style.display = 'none';
                 errorMessage.style.display = 'none';
-                loadingMessage.style.display = 'block'; // Show loading message
+                loadingMessage.style.display = 'block';
 
                 const scripSymbol = document.getElementById('scrip-symbol-input').value.toUpperCase();
                 console.log('Searching for scrip:', scripSymbol);
 
-                // ** SIMULATE API CALL AND DATA DISPLAY **
-                // In a real application, you would make an API call here.
-                // For now, we'll just simulate a delay and then show placeholder data or an error.
                 setTimeout(() => {
                     loadingMessage.style.display = 'none';
-                    if (scripSymbol === "NABIL" || scripSymbol === "HDL") { // Example valid symbols
-                        // Populate placeholder data (replace with actual fetched data later)
+                    if (scripSymbol === "NABIL" || scripSymbol === "HDL") {
                         document.getElementById('data-scrip-name').textContent = scripSymbol === "NABIL" ? "Nabil Bank Limited" : "Himalayan Distillery Ltd.";
                         document.getElementById('data-scrip-symbol').textContent = scripSymbol;
                         document.getElementById('data-scrip-sector').textContent = "Commercial Bank / Manufacturing & Processing";
@@ -278,8 +265,7 @@
                         document.getElementById('data-percent-change').textContent = "+1.20";
                         document.getElementById('data-volume').textContent = "15,780";
                         document.getElementById('data-turnover').textContent = "16,500,390.00";
-                        
-                        // Placeholder for floorsheet table
+
                         const floorsheetBody = document.getElementById('floorsheet-data-body');
                         floorsheetBody.innerHTML = `
                             <tr>
@@ -304,9 +290,9 @@
                         scripDataDisplay.style.display = 'block';
                     } else {
                         errorMessage.style.display = 'block';
-                        if(resultsPrompt) resultsPrompt.style.display = 'block'; // Show prompt again if error
+                        if(resultsPrompt) resultsPrompt.style.display = 'block';
                     }
-                }, 1500); // Simulate network delay
+                }, 1500);
             });
         }
     </script>
