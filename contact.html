@@ -8,7 +8,7 @@
     <title>Contact Us - Genvest</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-       
+         
       .site-header.header-auto-hidden {
           transform: translateY(-100%);
       }
@@ -34,7 +34,7 @@
                      <li><a href="portfolio.html">Portfolio</a></li>
                 </ul>
             </nav>
-            <button id="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+            <button id="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
         </div>
     </header>
 
@@ -151,7 +151,7 @@
                 </div>
             </div>
             <div class="footer-bottom text-center">
-                <p>&copy; <span id="current-year">2025</span> Genvest Ventures Pvt. Ltd. All rights reserved.</p>
+                <p>© <span id="current-year">2025</span> Genvest Ventures Pvt. Ltd. All rights reserved.</p>
                 <p>
                     <a href="privacy-policy.html">Privacy Policy</a> |
                     <a href="terms-of-use.html">Terms of Use</a> |
@@ -162,10 +162,8 @@
     </footer>
 
     <script>
-        // Simple script to update the current year in the footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Script for auto-hiding header on scroll down and show on scroll up
         let lastScrollTop = 0;
         const header = document.getElementById('main-header');
 
@@ -173,16 +171,13 @@
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
             if (scrollTop > lastScrollTop) {
-                // Scroll Down - hide header
                 header.classList.add('header-auto-hidden');
             } else {
-                // Scroll Up - show header
                 header.classList.remove('header-auto-hidden');
             }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
 
-        // Basic Mobile Navigation Toggle
         const navToggle = document.getElementById('mobile-nav-toggle');
         const mainNav = document.getElementById('main-nav');
 
@@ -192,9 +187,9 @@
                 const isExpanded = mainNav.classList.contains('active');
                 navToggle.setAttribute('aria-expanded', isExpanded);
                 if (isExpanded) {
-                    navToggle.innerHTML = '&times;'; // Change to 'X' icon
+                    navToggle.innerHTML = '×';
                 } else {
-                    navToggle.innerHTML = '&#9776;'; // Change back to hamburger icon
+                    navToggle.innerHTML = '☰';
                 }
             });
         }
