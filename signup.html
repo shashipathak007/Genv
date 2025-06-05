@@ -8,129 +8,123 @@
     <title>Genvest - Sign Up</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-        /* Styles for the signup page body and main content to center the card */
         body.signup-page {
-            font-family: Arial, sans-serif; /* Fallback, ensure this matches your site's font */
-            background-color: #f0f2f5; /* Light grey background for the entire page */
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensure body takes full viewport height */
+            min-height: 100vh;
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Include padding/border in element's total width and height */
+            box-sizing: border-box;
         }
 
         #main-content {
-            flex-grow: 1; /* Allows main content to take up remaining space, pushing footer down */
+            flex-grow: 1;
             display: flex;
-            justify-content: center; /* Horizontally center the signup card */
-            align-items: center; /* Vertically center the signup card */
-            padding: 40px 20px; /* Add some padding around the card */
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
             box-sizing: border-box;
         }
 
         .signup-section {
             width: 100%;
             display: flex;
-            justify-content: center; /* Ensure the card itself is centered within its section */
+            justify-content: center;
             align-items: center;
         }
 
-        /* Styles for the Signup Card */
         .signup-card {
-            background-color: #ffffff; /* White background for the card */
+            background-color: #ffffff;
             padding: 40px;
-            border-radius: 8px; /* Slightly rounded corners */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 450px; /* Maximum width of the signup card, as per image */
-            text-align: center; /* Center aligns the content within the card */
-            box-sizing: border-box; /* Include padding in the element's total width */
+            max-width: 450px;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .signup-card h2 {
-            color: #1e3d30; /* Dark green similar to the image's text */
+            color: #1e3d30;
             font-size: 28px;
-            margin-bottom: 30px; /* Space below the heading */
+            margin-bottom: 30px;
             font-weight: bold;
         }
 
-        /* Form Group (Label + Input) Styles */
         .form-group {
-            margin-bottom: 20px; /* Space between form groups */
-            text-align: left; /* Align labels and inputs to the left within their group */
+            margin-bottom: 20px;
+            text-align: left;
         }
 
         .form-group label {
-            display: block; /* Make label take full width and put input on new line */
-            margin-bottom: 8px; /* Space between label and input */
+            display: block;
+            margin-bottom: 8px;
             color: #333333;
             font-size: 16px;
-            font-weight: normal; /* Labels are not bold in the image */
+            font-weight: normal;
         }
 
         .form-group input[type="text"],
         .form-group input[type="email"],
         .form-group input[type="password"] {
-            width: 100%; /* Make inputs span the full width of the card */
-            padding: 14px 15px; /* Ample padding for a taller input field */
-            border: 1px solid #cccccc; /* Light grey border */
-            border-radius: 6px; /* Rounded corners for inputs */
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
             font-size: 16px;
-            box-sizing: border-box; /* Ensures padding and border are included in the width */
-            outline: none; /* Remove default blue outline on focus */
-            transition: border-color 0.2s ease; /* Smooth transition for border on focus */
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s ease;
         }
 
         .form-group input[type="text"]:focus,
         .form-group input[type="email"]:focus,
         .form-group input[type="password"]:focus {
-            border-color: #6a8d7d; /* A slightly lighter green on focus */
+            border-color: #6a8d7d;
         }
 
-        /* Signup Button Styles */
         .signup-btn-form {
-            background-color: #2b5f4c; /* Dark green for the button */
-            color: #ffffff; /* White text */
+            background-color: #2b5f4c;
+            color: #ffffff;
             padding: 15px 25px;
             border: none;
             border-radius: 6px;
             font-size: 18px;
             font-weight: bold;
-            cursor: pointer; /* Indicate it's clickable */
-            width: 100%; /* Full width button */
-            margin-top: 20px; /* Space above the button */
-            transition: background-color 0.3s ease; /* Smooth hover effect */
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
 
         .signup-btn-form:hover {
-            background-color: #1e3d30; /* Slightly darker green on hover */
+            background-color: #1e3d30;
         }
 
-        /* Login Text Styles */
         .login-text {
-            margin-top: 25px; /* Space above the login text */
+            margin-top: 25px;
             font-size: 16px;
-            color: #555555; /* Dark grey for "Already have an account?" */
+            color: #555555;
         }
 
         .login-text a {
-            color: #2b5f4c; /* Dark green for the "Login Here" link */
+            color: #2b5f4c;
             text-decoration: none;
-            font-weight: bold; /* "Login Here" is bold in the image */
-            transition: color 0.2s ease; /* Smooth color change on hover */
+            font-weight: bold;
+            transition: color 0.2s ease;
         }
 
         .login-text a:hover {
-            text-decoration: underline; /* Underline on hover */
-            color: #1e3d30; /* Darker green on hover */
+            text-decoration: underline;
+            color: #1e3d30;
         }
 
-        /* Responsive Adjustments (Optional, but good practice) */
         @media (max-width: 500px) {
             .signup-card {
-                margin: 0 15px; /* Add horizontal margin on very small screens */
-                padding: 30px 20px; /* Reduce padding slightly on small screens */
+                margin: 0 15px;
+                padding: 30px 20px;
             }
         }
     </style>
@@ -225,7 +219,6 @@
             });
         }
 
-        // --- Signup Form Submission Logic (Client-side simulation) ---
         const signupForm = document.getElementById('signup-form');
         if (signupForm) {
             signupForm.addEventListener('submit', function(event) {
@@ -241,11 +234,9 @@
                     return;
                 }
 
-                // Basic validation
                 if (fullName && email && password) {
-                    // In a real app, send data to server for user creation
                     alert(`Account created for ${fullName} (${email})! (Simulated)`);
-                    window.location.href = 'login.html'; // Redirect to login page
+                    window.location.href = 'login.html';
                 } else {
                     alert('Please fill in all fields.');
                 }
