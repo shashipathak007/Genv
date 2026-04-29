@@ -431,6 +431,10 @@ img {
     color: #e2e8f0;
 }
 
+.testimonial-item blockquote p {
+    color: inherit;
+}
+
 .testimonial-item cite {
     font-weight: 600;
     color: var(--primary-light);
@@ -475,6 +479,10 @@ img {
     background: var(--primary-dark);
     color: #cbd5e1;
     padding: 80px 0 0;
+}
+
+.site-footer p {
+    color: inherit;
 }
 
 .footer-grid {
